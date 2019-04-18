@@ -1,0 +1,45 @@
+{
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "js/jquery.min.js",
+            "js/background.js"
+        ]
+    },
+    "description": "看板娘",
+    "content_scripts": [
+        {
+            "all_frames": false,
+            "js": [
+                "js/content.js"
+            ],
+            "matches": [
+                "*://*/*"
+            ],
+            "run_at": "document_end",
+            "css": [
+            ]
+        }
+    ],
+    "icons": {
+        "128": "images/logo-128.png",
+        "16": "images/logo-16.png",
+        "48": "images/logo-48.png",
+        "64": "images/logo-64.png"
+    },
+    "manifest_version": 2,
+    "name": "看板娘",
+    "permissions": [
+        "tabs",
+        "storage",
+        "activeTab",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "version": "0.0.1",
+    "browser_action": {
+        "default_icon": "images/logo-128.png",
+        "default_title": "看板娘",
+        "default_popup": "html/popup.html"
+    }
+}
